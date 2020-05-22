@@ -107,6 +107,7 @@ void ili9488_init(void)
 	ili9488_enable_backlight(true);
 
 #if defined (CONFIG_LVGL_PREDEFINED_DISPLAY_NONE)
+       uint8_t data[] = {0x08};
 #if defined CONFIG_LVGL_DISPLAY_ORIENTATION_LANDSCAPE
 #pragma message "ILI9488 - LANDSCAPE"
 	uint8_t data[] = {0x28};

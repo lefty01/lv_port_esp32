@@ -103,6 +103,7 @@ void ili9486_init(void)
 	ili9486_enable_backlight(true);
 
 #if defined (CONFIG_LVGL_PREDEFINED_DISPLAY_NONE)
+       uint8_t data[] = {0x08};
 #if defined CONFIG_LVGL_DISPLAY_ORIENTATION_LANDSCAPE
 #pragma message "ILI9486 - LANDSCAPE"
 	uint8_t data[] = {0x28};

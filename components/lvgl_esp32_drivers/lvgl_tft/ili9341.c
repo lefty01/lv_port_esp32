@@ -143,6 +143,7 @@ void ili9341_init(void)
 	ili9341_send_cmd(0x36);
 	ili9341_send_data(&data, 1);
 #elif defined (CONFIG_LVGL_PREDEFINED_DISPLAY_NONE)
+       uint8_t data[] = {0x08};
     #if defined CONFIG_LVGL_DISPLAY_ORIENTATION_LANDSCAPE
     #pragma message "ILI9341 - LANDSCAPE"
 	uint8_t data[] = {0x28};
